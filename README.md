@@ -1,3 +1,3 @@
 # natours
 
-Exploring Advance CSS
+Exploring Advanced CSS
