@@ -10,11 +10,9 @@
   column-gap: $gutter-hor;
   width: 100%;
   max-width: $grid-width;
-  background-color: #eee;
   margin: 0 auto;
 
   [class^='col-'] {
-    background-color: orangered;
     padding: 2rem;
   }
 
