@@ -12,6 +12,10 @@
   max-width: $grid-width;
   margin: 0 auto;
 
+  &:not(:last-child) {
+    margin-bottom: $gutter-ver;
+  }
+
   .col-1-of-2 {
     flex: 1;
     // flex: 0 1 calc((100% - #{$gutter-hor}) / 2);
