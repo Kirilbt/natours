@@ -4,3 +4,53 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+// Media Query Manager
+
+// Device Breakpoints
+$phone: 600px;
+$tab-port: 900px;
+$tab-land: 1200px;
+$big-desk: 1800px;
+
+@mixin respond($breakpoint) {
+  @if $breakpoint <= $tab-land {
+    // 1rem AND 1em in media query definition are always equal to default browser font-size (-> 16px)
+    // recommendation: em is best unit for media query after some experiences;
+    // max-width is calculated based on passed-in breakpoint and default browser font-size (-> 16px)
+    @media (max-width: calc(calc($breakpoint / 16px) * 1em)) {
+      // @content contains all childs, so media query mixin acts like wrapper
+      @content;
+    }
+  } @else {
+    // for big desktops, min-width is needed
+    @media (min-width: calc(calc($breakpoint / 16px) * 1em)) {
+      @content;
+    }
+  }
+}
+
+// OLD CODE
+// /*
+// $breakpoint argument choices
+//    0 -  600px : phone
+//  600 -  900px : tab-port
+//  900 - 1200px : tab-land
+// 1800 +        : big-desk
+// */
+
+// // 1em = 16px
+// @mixin respond($breakpoint) {
+//   @if $breakpoint == phone {
+//     @media (max-width: 37.5em) { @content }; // 600px
+//   }
+//   @if $breakpoint == tab-port {
+//     @media (max-width: 56.25em) { @content }; // 900px
+//   }
+//   @if $breakpoint == tab-land {
+//     @media (max-width: 75em) { @content }; // 1200px
+//   }
+//   @if $breakpoint == big-desk {
+//     @media (min-width: 112.5em) { @content }; // 1800px
+//   }
+// }
