@@ -12,8 +12,19 @@
   max-width: $grid-width;
   margin: 0 auto;
 
+  @include respond($tab-port) {
+    flex-flow: column;
+    row-gap: $gutter-ver-small;
+    max-width: 50rem;
+    padding: 0 3rem;
+  }
+
   &:not(:last-child) {
     margin-bottom: $gutter-ver;
+
+    @include respond($tab-port) {
+      margin-bottom: $gutter-ver-small;
+    }
   }
 
   .col-1-of-2 {
