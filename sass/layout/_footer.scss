@@ -22,7 +22,6 @@
     height: auto;
 
     @include respond($tab-port) {
-      width: 10rem;
       height: auto;
     }
   }

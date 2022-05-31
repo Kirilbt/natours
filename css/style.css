@@ -818,7 +818,6 @@ body {
 }
 @media (max-width: 56.25em) {
   .footer__logo {
-    width: 10rem;
     height: auto;
   }
 }
