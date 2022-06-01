@@ -1,5 +1,4 @@
 .btn {
-  text-align: center;
 
   @include respond($phone) {
     max-width: 100%;
@@ -10,6 +9,7 @@
   &:visited {
     text-transform: uppercase;
     text-decoration: none;
+    text-align: center;
     padding: 1.5rem 4rem;
     display: inline-block;
     border-radius: 10rem;
